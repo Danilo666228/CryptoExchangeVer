@@ -35,7 +35,8 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.MiniProfile = new CryptoExchange.UserControls.UC_MiniProfile();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +99,8 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Panel2);
+            this.guna2ShadowPanel1.Controls.Add(this.guna2Separator1);
+            this.guna2ShadowPanel1.Controls.Add(this.MiniProfile);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
@@ -109,13 +111,21 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(289, 900);
             this.guna2ShadowPanel1.TabIndex = 1;
             // 
-            // guna2Panel2
+            // MiniProfile
             // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(289, 118);
-            this.guna2Panel2.TabIndex = 0;
+            this.MiniProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
+            this.MiniProfile.Location = new System.Drawing.Point(0, 0);
+            this.MiniProfile.Name = "MiniProfile";
+            this.MiniProfile.Size = new System.Drawing.Size(283, 121);
+            this.MiniProfile.TabIndex = 2;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 127);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(282, 10);
+            this.guna2Separator1.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -144,6 +154,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private UserControls.UC_MiniProfile MiniProfile;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

@@ -1,6 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -12,6 +15,7 @@ namespace CryptoExchange.ConnectDbContext
     public class User
     {
         public int Id { get; set; }
+        public byte[] Photo { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
@@ -47,12 +51,12 @@ namespace CryptoExchange.ConnectDbContext
                 }
             }
         }
-        public int ReturnId(string login,string password)
+        public int ReturnId(string login, string password)
         {
-            using(ConnectDb db = new ConnectDb())
+            using (ConnectDb db = new ConnectDb())
             {
                 var userId = db.Users.FirstOrDefault(item => item.Login == login && item.Password == password);
-                if(userId == null)
+                if (userId == null)
                 {
                     return -1;
                 }
@@ -88,12 +92,13 @@ namespace CryptoExchange.ConnectDbContext
                 var user = context.Users.FirstOrDefault(users => users.Id == id);
                 if (user != null)
                 {
-                    return user.Balance ;
+                    return user.Balance;
 
                 }
                 return -1;
             }
         }
-
+        
+        
     }
 }

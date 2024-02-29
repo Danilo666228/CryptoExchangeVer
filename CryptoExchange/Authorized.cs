@@ -52,8 +52,8 @@ namespace CryptoExchange
             {
                 MessageBox.Show("Вы успешно вошли в аккаунт");
                 this.Hide();
-                //MainForm main = new MainForm(userId);
-                //main.Show();
+                MainForm main = new MainForm(userId);
+                main.Show();
             }
             else
             {

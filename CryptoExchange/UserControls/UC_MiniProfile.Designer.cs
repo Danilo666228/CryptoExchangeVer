@@ -31,76 +31,75 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MiniProfile));
             this.lblNameUser = new System.Windows.Forms.Label();
             this.lblBalanceUser = new System.Windows.Forms.Label();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnAddBalance = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNameUser
             // 
             this.lblNameUser.AutoSize = true;
-            this.lblNameUser.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNameUser.Location = new System.Drawing.Point(153, 41);
+            this.lblNameUser.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblNameUser.Location = new System.Drawing.Point(108, 31);
             this.lblNameUser.Name = "lblNameUser";
-            this.lblNameUser.Size = new System.Drawing.Size(36, 19);
+            this.lblNameUser.Size = new System.Drawing.Size(45, 25);
             this.lblNameUser.TabIndex = 0;
             this.lblNameUser.Text = "Имя";
             // 
             // lblBalanceUser
             // 
             this.lblBalanceUser.AutoSize = true;
-            this.lblBalanceUser.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblBalanceUser.Location = new System.Drawing.Point(153, 77);
+            this.lblBalanceUser.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBalanceUser.Location = new System.Drawing.Point(108, 67);
             this.lblBalanceUser.Name = "lblBalanceUser";
-            this.lblBalanceUser.Size = new System.Drawing.Size(63, 19);
+            this.lblBalanceUser.Size = new System.Drawing.Size(78, 25);
             this.lblBalanceUser.TabIndex = 0;
             this.lblBalanceUser.Text = "Баланс";
             // 
-            // guna2ImageButton1
+            // guna2PictureBox1
             // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton1.IndicateFocus = true;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(252, 0);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(37, 36);
-            this.guna2ImageButton1.TabIndex = 1;
-            this.guna2ImageButton1.UseTransparentBackground = true;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(10, 17);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 81);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // guna2ImageButton2
+            // btnAddBalance
             // 
-            this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton2.IndicateFocus = true;
-            this.guna2ImageButton2.Location = new System.Drawing.Point(252, 82);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(37, 36);
-            this.guna2ImageButton2.TabIndex = 1;
-            this.guna2ImageButton2.UseTransparentBackground = true;
+            this.btnAddBalance.Animated = true;
+            this.btnAddBalance.BorderRadius = 10;
+            this.btnAddBalance.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBalance.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddBalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddBalance.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddBalance.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddBalance.ForeColor = System.Drawing.Color.White;
+            this.btnAddBalance.Image = ((System.Drawing.Image)(resources.GetObject("btnAddBalance.Image")));
+            this.btnAddBalance.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnAddBalance.Location = new System.Drawing.Point(243, 0);
+            this.btnAddBalance.Name = "btnAddBalance";
+            this.btnAddBalance.Size = new System.Drawing.Size(40, 36);
+            this.btnAddBalance.TabIndex = 3;
+            this.btnAddBalance.Click += new System.EventHandler(this.btnAddBalance_Click);
             // 
             // UC_MiniProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(70)))));
-            this.Controls.Add(this.guna2ImageButton2);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnAddBalance);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lblBalanceUser);
             this.Controls.Add(this.lblNameUser);
             this.Name = "UC_MiniProfile";
-            this.Size = new System.Drawing.Size(289, 118);
+            this.Size = new System.Drawing.Size(283, 118);
             this.Load += new System.EventHandler(this.UC_MiniProfile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +109,7 @@
 
         private System.Windows.Forms.Label lblNameUser;
         private System.Windows.Forms.Label lblBalanceUser;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnAddBalance;
     }
 }
