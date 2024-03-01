@@ -48,7 +48,7 @@
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 800;
+            this.guna2BorderlessForm1.AnimationInterval = 1000;
             this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorColor = System.Drawing.Color.DarkGray;
@@ -118,7 +118,7 @@
             this.btnAuthorized.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
             this.btnAuthorized.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAuthorized.ForeColor = System.Drawing.Color.White;
-            this.btnAuthorized.Location = new System.Drawing.Point(109, 249);
+            this.btnAuthorized.Location = new System.Drawing.Point(109, 248);
             this.btnAuthorized.Name = "btnAuthorized";
             this.btnAuthorized.ShadowDecoration.BorderRadius = 50;
             this.btnAuthorized.ShadowDecoration.Color = System.Drawing.Color.DimGray;
@@ -132,14 +132,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label1.Location = new System.Drawing.Point(136, 215);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 19);
+            this.label1.Size = new System.Drawing.Size(144, 19);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Скрыть пароль";
+            this.label1.Text = "Показать пароль";
             // 
             // LinklblRegistration
             // 
@@ -180,7 +180,7 @@
             // 
             this.txbPassword.Animated = true;
             this.txbPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txbPassword.BorderRadius = 10;
+            this.txbPassword.BorderRadius = 5;
             this.txbPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbPassword.DefaultText = "";
@@ -189,29 +189,30 @@
             this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbPassword.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbPassword.ForeColor = System.Drawing.Color.Transparent;
             this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbPassword.IconLeft")));
             this.txbPassword.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.txbPassword.Location = new System.Drawing.Point(51, 150);
+            this.txbPassword.Location = new System.Drawing.Point(51, 145);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PasswordChar = '●';
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.PlaceholderText = "";
             this.txbPassword.SelectedText = "";
             this.txbPassword.Size = new System.Drawing.Size(286, 50);
             this.txbPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbPassword.TabIndex = 0;
-            this.txbPassword.UseSystemPasswordChar = true;
+            this.txbPassword.TabStop = false;
+            this.txbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbLogin
             // 
             this.txbLogin.Animated = true;
             this.txbLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txbLogin.BorderRadius = 10;
             this.txbLogin.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txbLogin.CausesValidation = false;
             this.txbLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbLogin.DefaultText = "";
             this.txbLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -219,21 +220,23 @@
             this.txbLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbLogin.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbLogin.ForeColor = System.Drawing.Color.Transparent;
             this.txbLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbLogin.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbLogin.IconLeft")));
             this.txbLogin.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.txbLogin.Location = new System.Drawing.Point(51, 62);
+            this.txbLogin.Location = new System.Drawing.Point(51, 57);
             this.txbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.PasswordChar = '\0';
-            this.txbLogin.PlaceholderText = "";
+            this.txbLogin.PlaceholderText = "\r\n";
             this.txbLogin.SelectedText = "";
             this.txbLogin.Size = new System.Drawing.Size(286, 50);
             this.txbLogin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbLogin.TabIndex = 0;
+            this.txbLogin.TabStop = false;
+            this.txbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Authorized
             // 

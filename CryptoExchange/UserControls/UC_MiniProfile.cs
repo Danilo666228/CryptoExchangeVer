@@ -26,7 +26,7 @@ namespace CryptoExchange.UserControls
         {
             User user = new User();
             lblNameUser.Text = user.GetUserName(UserId);            
-            lblBalanceUser.Text = user.GetUserBalance(UserId).ToString();
+            lblBalanceUser.Text = user.GetUserBalance(UserId).ToString() + " $";
         }
 
         private void UC_MiniProfile_Load(object sender, EventArgs e)

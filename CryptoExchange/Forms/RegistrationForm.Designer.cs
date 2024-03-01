@@ -206,20 +206,21 @@
             this.txbRepeatPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbRepeatPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbRepeatPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbRepeatPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbRepeatPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbRepeatPassword.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbRepeatPassword.ForeColor = System.Drawing.Color.Transparent;
             this.txbRepeatPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbRepeatPassword.IconLeftSize = new System.Drawing.Size(35, 35);
             this.txbRepeatPassword.Location = new System.Drawing.Point(393, 315);
-            this.txbRepeatPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbRepeatPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txbRepeatPassword.Name = "txbRepeatPassword";
             this.txbRepeatPassword.PasswordChar = '\0';
-            this.txbRepeatPassword.PlaceholderText = "Обязательное поле";
+            this.txbRepeatPassword.PlaceholderText = "";
             this.txbRepeatPassword.SelectedText = "";
             this.txbRepeatPassword.Size = new System.Drawing.Size(257, 50);
             this.txbRepeatPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbRepeatPassword.TabIndex = 0;
+            this.txbRepeatPassword.TabStop = false;
             this.txbRepeatPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbMiddleName
@@ -235,20 +236,23 @@
             this.txbMiddleName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbMiddleName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbMiddleName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbMiddleName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbMiddleName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbMiddleName.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbMiddleName.ForeColor = System.Drawing.Color.Transparent;
             this.txbMiddleName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbMiddleName.IconLeftSize = new System.Drawing.Size(35, 35);
+            this.txbMiddleName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txbMiddleName.Location = new System.Drawing.Point(37, 315);
-            this.txbMiddleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMiddleName.Margin = new System.Windows.Forms.Padding(0);
             this.txbMiddleName.Name = "txbMiddleName";
             this.txbMiddleName.PasswordChar = '\0';
-            this.txbMiddleName.PlaceholderText = "Обязательное поле";
+            this.txbMiddleName.PlaceholderText = "";
             this.txbMiddleName.SelectedText = "";
+            this.txbMiddleName.ShortcutsEnabled = false;
             this.txbMiddleName.Size = new System.Drawing.Size(257, 50);
             this.txbMiddleName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbMiddleName.TabIndex = 0;
+            this.txbMiddleName.TabStop = false;
             this.txbMiddleName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbPassword
@@ -264,7 +268,7 @@
             this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbPassword.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbPassword.ForeColor = System.Drawing.Color.Transparent;
             this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -273,11 +277,12 @@
             this.txbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '\0';
-            this.txbPassword.PlaceholderText = "Обязательное поле";
+            this.txbPassword.PlaceholderText = "";
             this.txbPassword.SelectedText = "";
             this.txbPassword.Size = new System.Drawing.Size(257, 50);
             this.txbPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbPassword.TabIndex = 0;
+            this.txbPassword.TabStop = false;
             this.txbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbLogin
@@ -293,7 +298,7 @@
             this.txbLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbLogin.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbLogin.ForeColor = System.Drawing.Color.Transparent;
             this.txbLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -302,11 +307,12 @@
             this.txbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.PasswordChar = '\0';
-            this.txbLogin.PlaceholderText = "Обязательное поле";
+            this.txbLogin.PlaceholderText = "";
             this.txbLogin.SelectedText = "";
             this.txbLogin.Size = new System.Drawing.Size(257, 50);
             this.txbLogin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbLogin.TabIndex = 0;
+            this.txbLogin.TabStop = false;
             this.txbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbFirstName
@@ -322,7 +328,7 @@
             this.txbFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbFirstName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbFirstName.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbFirstName.ForeColor = System.Drawing.Color.Transparent;
             this.txbFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -331,11 +337,12 @@
             this.txbFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbFirstName.Name = "txbFirstName";
             this.txbFirstName.PasswordChar = '\0';
-            this.txbFirstName.PlaceholderText = "Обязательное поле";
+            this.txbFirstName.PlaceholderText = "";
             this.txbFirstName.SelectedText = "";
             this.txbFirstName.Size = new System.Drawing.Size(257, 50);
             this.txbFirstName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbFirstName.TabIndex = 0;
+            this.txbFirstName.TabStop = false;
             this.txbFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txbLastName
@@ -351,7 +358,7 @@
             this.txbLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbLastName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.txbLastName.Font = new System.Drawing.Font("JetBrains Mono", 12F);
             this.txbLastName.ForeColor = System.Drawing.Color.Transparent;
             this.txbLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -360,20 +367,22 @@
             this.txbLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbLastName.Name = "txbLastName";
             this.txbLastName.PasswordChar = '\0';
-            this.txbLastName.PlaceholderText = "Обязательное поле";
+            this.txbLastName.PlaceholderText = "";
             this.txbLastName.SelectedText = "";
             this.txbLastName.Size = new System.Drawing.Size(257, 50);
             this.txbLastName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbLastName.TabIndex = 0;
+            this.txbLastName.TabStop = false;
             this.txbLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 800;
+            this.guna2BorderlessForm1.AnimationInterval = 1000;
             this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragStartTransparencyValue = 0.8D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // RegistrationForm

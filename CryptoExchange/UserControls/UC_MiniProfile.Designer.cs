@@ -40,7 +40,7 @@
             // 
             this.lblNameUser.AutoSize = true;
             this.lblNameUser.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNameUser.Location = new System.Drawing.Point(108, 31);
+            this.lblNameUser.Location = new System.Drawing.Point(111, 28);
             this.lblNameUser.Name = "lblNameUser";
             this.lblNameUser.Size = new System.Drawing.Size(45, 25);
             this.lblNameUser.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.lblBalanceUser.AutoSize = true;
             this.lblBalanceUser.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblBalanceUser.Location = new System.Drawing.Point(108, 67);
+            this.lblBalanceUser.Location = new System.Drawing.Point(111, 64);
             this.lblBalanceUser.Name = "lblBalanceUser";
             this.lblBalanceUser.Size = new System.Drawing.Size(78, 25);
             this.lblBalanceUser.TabIndex = 0;

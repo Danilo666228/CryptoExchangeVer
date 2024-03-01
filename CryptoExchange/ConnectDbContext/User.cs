@@ -98,7 +98,18 @@ namespace CryptoExchange.ConnectDbContext
                 return -1;
             }
         }
-        
-        
+        public void UpdateBalance(int id, decimal value)
+        {
+            using (var context = new ConnectDb())
+            {
+                var user = context.Users.FirstOrDefault(users => users.Id == id);
+                if (user != null)
+                {
+                    user.Balance += value;
+                    context.SaveChanges();
+                }
+            }
+        }
+
     }
 }

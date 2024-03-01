@@ -24,15 +24,15 @@ namespace CryptoExchange
 
         private void swPassword_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (swPassword.Checked == true)
+            if(txbPassword.PasswordChar == '*')
             {
-                txbPassword.UseSystemPasswordChar = false;
+                txbPassword.PasswordChar = default;
             }
             else
             {
-                txbPassword.UseSystemPasswordChar = true;
+                txbPassword.PasswordChar = '*';
             }
+            
         }
 
 
