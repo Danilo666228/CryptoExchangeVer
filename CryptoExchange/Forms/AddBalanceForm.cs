@@ -1,4 +1,5 @@
 ﻿using CryptoExchange.ConnectDbContext;
+using CryptoExchange.ValidateUser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +16,7 @@ namespace CryptoExchange
 {
     public partial class AddBalanceForm : Form
     {
+        Regex TopBalance = new Regex(@"[0-9]");
         public int UserId { get; set; }
         public AddBalanceForm(int userId)
         {
@@ -21,88 +24,84 @@ namespace CryptoExchange
             this.UserId = userId;
 
         }
-
-        private void AddBalanceForm_Load(object sender, EventArgs e)
+        private void BlockTypeCard()
         {
-
+            imagebtnSberbank.Enabled = false;
+            imagebtnTinkov.Enabled = false;
+            imgbtnVTB.Enabled = false;
         }
-
         private void imgbtnVTB_CheckedChanged(object sender, EventArgs e)
         {
-            if (imgbtnVTB.Checked)
-            {                
-                pnlCard.FillColor = Color.FromArgb(10, 41, 115);
-                lblNameBank.Text = "ВТБ Банк";
-                txbNumberCard.FillColor = Color.FromArgb(10, 41, 100);
-                txbNameUser.FillColor = Color.FromArgb(10, 41, 100);
-                txbActionCard.FillColor = Color.FromArgb(10, 41, 100);
-                txbNumberCard.PlaceholderText = "Введите номер карты";
-                txbNameUser.PlaceholderText = "Ваша Фамилия и Отчество";
-                txbActionCard.PlaceholderText = "Срок действия";
-                pnlCard.Visible = true;
-            }
-            else
-            {
-                pnlCard.Visible = false;
-            }
+            CardVTB.BringToFront();
+            CardVTB.Visible = true;
+            CardSberbank.Visible = false;
+            CardTinkoff.Visible = false;
+            txbTopBalance.Visible = true;
+            btnTopBalance.Visible = true;
 
         }
 
         private void imagebtnSberbank_CheckedChanged(object sender, EventArgs e)
         {
-            if (imagebtnSberbank.Checked)
-            {
-                pnlCard.FillColor = Color.FromArgb(2, 158, 66);
-                lblNameBank.Text = "CберБанк";
-                txbNumberCard.FillColor = Color.FromArgb(2, 158, 90);
-                txbNameUser.FillColor = Color.FromArgb(2, 158, 90);
-                txbActionCard.FillColor = Color.FromArgb(2, 158, 90);
-                txbNumberCard.PlaceholderText = "Введите номер карты";
-                txbNameUser.PlaceholderText = "Ваша Фамилия и Отчество";
-                txbActionCard.PlaceholderText = "Срок действие";
-                pnlCard.Visible = true;
-            }
-            else
-            {
-                pnlCard.Visible = false;
-            }
+            CardSberbank.BringToFront();
+            CardSberbank.Visible = true;
+            CardTinkoff.Visible = false;
+            CardVTB.Visible = false;
+            txbTopBalance.Visible = true;
+            btnTopBalance.Visible = true;
         }
 
         private void imagebtnTinkov_CheckedChanged(object sender, EventArgs e)
         {
-            if (imagebtnTinkov.Checked)
-            {
-                pnlCard.FillColor = Color.FromArgb(255, 222, 45);
-                lblNameBank.Text = "Тинькоф";
-                txbNumberCard.FillColor = Color.FromArgb(255, 222, 70);
-                txbNameUser.FillColor = Color.FromArgb(255, 222, 70);
-                txbActionCard.FillColor = Color.FromArgb(255, 222, 70);
-                txbNumberCard.PlaceholderText = "Введите номер карты";
-                txbNameUser.PlaceholderText = "Ваша Фамилия и Отчество";
-                txbActionCard.PlaceholderText = "Срок действие";
-                pnlCard.Visible = true;
-            }
-            else
-            {
-                pnlCard.Visible = false;
-            }
+            CardTinkoff.BringToFront();
+            CardTinkoff.Visible = true;
+            CardVTB.Visible = false;
+            CardSberbank.Visible = false;
+            txbTopBalance.Visible = true;
+            btnTopBalance.Visible = true;
         }
 
         private async void btnTopBalance_Click(object sender, EventArgs e)
         {
-            
-            btnTopBalance.Visible = false;
-            ProggressBar.Visible = true;
-            User user = new User();
-            user.UpdateBalance(UserId, Convert.ToDecimal(txbTopBalance.Text));    
-            for(int i = 0; i < 10; i++)
+
+            Validate validate = new Validate();
+            if(validate.ValidateCard(CardVTB.CVV,CardVTB.NumberCard,CardVTB.NameUserCard,CardVTB.ActionCard,CardVTB) == false)
             {
-                ProggressBar.Start();
-                await Task.Delay(500);
+                return;
             }
-            ProggressBar.Stop();
-            MessageBox.Show("Оплата прошла успешно");
-            this.Hide();
+            if(validate.ValidateCard(CardSberbank.CVV, CardSberbank.NumberCard, CardSberbank.NameUserCard, CardSberbank.ActionCard, CardSberbank) == false)
+            {
+                return;
+            }
+            if(validate.ValidateCard(CardTinkoff.CVV, CardTinkoff.NumberCard, CardTinkoff.NameUserCard, CardTinkoff.ActionCard, CardTinkoff) == false)
+            {
+                return;
+            }
+            if(!TopBalance.IsMatch(txbTopBalance.Text))
+            {
+                MessageBox.Show("Введите корректные данные");
+                return;
+            }
+            else
+            {
+                BlockTypeCard();
+                CardVTB.BlockTextBox();
+                CardSberbank.BlockTextBox();
+                CardTinkoff.BlockTextBox();
+                CardVTB.BlockTextBox();
+                btnTopBalance.Visible = false;
+                ProggressBar.Visible = true;
+                User user = new User();
+                for (int i = 0; i < 7; i++)
+                {
+                    ProggressBar.Start();
+                    await Task.Delay(500);
+                }
+                user.UpdateBalance(UserId, Convert.ToDecimal(txbTopBalance.Text));
+                ProggressBar.Stop();
+                this.Hide();
+                MessageBox.Show("Оплата прошла успешно");
+            }
         }
     }
 }

@@ -20,7 +20,6 @@ namespace CryptoExchange
         {
             InitializeComponent();
             this.UserId = userId;
-
         }
 
         

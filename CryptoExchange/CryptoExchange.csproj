@@ -121,13 +121,19 @@
     <Compile Include="Forms\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_CardPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_CardPanel.Designer.cs">
+      <DependentUpon>UC_CardPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_MiniProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UC_MiniProfile.Designer.cs">
       <DependentUpon>UC_MiniProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="ValidateUser\Validate.cs" />
+    <Compile Include="Validate\Validate.cs" />
     <EmbeddedResource Include="Forms\AddBalanceForm.resx">
       <DependentUpon>AddBalanceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +161,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_CardPanel.resx">
+      <DependentUpon>UC_CardPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_MiniProfile.resx">
       <DependentUpon>UC_MiniProfile.cs</DependentUpon>

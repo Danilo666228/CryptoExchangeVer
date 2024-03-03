@@ -26,7 +26,7 @@ namespace CryptoExchange
         {
             Validate validate = new Validate();
             User user = new User();
-            if (validate.ValidateUser(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text, txbPassword.Text,txbRepeatPassword.Text) == false)
+            if (validate.ValidateRegistrationUser(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text, txbPassword.Text,txbRepeatPassword.Text) == false)
             {
                 return;
             }

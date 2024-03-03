@@ -31,28 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBalanceForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.pnlCard = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlHeader = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlCloseForm = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCloseForm = new Guna.UI2.WinForms.Guna2ControlBox();
             this.imagebtnTinkov = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             this.imagebtnSberbank = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             this.imgbtnVTB = new Guna.UI2.WinForms.Guna2ImageRadioButton();
-            this.lblNameBank = new System.Windows.Forms.Label();
-            this.txbNumberCard = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbTopBalance = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTopBalance = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCloseForm = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pnlCloseForm = new Guna.UI2.WinForms.Guna2Panel();
-            this.txbNameUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txbActionCard = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblTypeCard = new System.Windows.Forms.Label();
-            this.pcbAttachCard = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ProggressBar = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
-            this.pnlCard.SuspendLayout();
+            this.CardSberbank = new CryptoExchange.UserControls.UC_CardPanel();
+            this.CardVTB = new CryptoExchange.UserControls.UC_CardPanel();
+            this.CardTinkoff = new CryptoExchange.UserControls.UC_CardPanel();
             this.pnlHeader.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
             this.pnlCloseForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAttachCard)).BeginInit();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -63,25 +57,6 @@
             this.BorderlessForm.ContainerControl = this;
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.TransparentWhileDrag = true;
-            // 
-            // pnlCard
-            // 
-            this.pnlCard.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCard.Controls.Add(this.pcbAttachCard);
-            this.pnlCard.Controls.Add(this.txbActionCard);
-            this.pnlCard.Controls.Add(this.txbNameUser);
-            this.pnlCard.Controls.Add(this.txbNumberCard);
-            this.pnlCard.Controls.Add(this.lblTypeCard);
-            this.pnlCard.Controls.Add(this.lblNameBank);
-            this.pnlCard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnlCard.ForeColor = System.Drawing.Color.Black;
-            this.pnlCard.Location = new System.Drawing.Point(69, 172);
-            this.pnlCard.Name = "pnlCard";
-            this.pnlCard.Radius = 10;
-            this.pnlCard.ShadowColor = System.Drawing.Color.Black;
-            this.pnlCard.Size = new System.Drawing.Size(485, 271);
-            this.pnlCard.TabIndex = 0;
-            this.pnlCard.Visible = false;
             // 
             // pnlHeader
             // 
@@ -100,15 +75,34 @@
             this.pnlHeader.Size = new System.Drawing.Size(615, 152);
             this.pnlHeader.TabIndex = 1;
             // 
+            // pnlCloseForm
+            // 
+            this.pnlCloseForm.Controls.Add(this.btnCloseForm);
+            this.pnlCloseForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCloseForm.Location = new System.Drawing.Point(0, 0);
+            this.pnlCloseForm.Name = "pnlCloseForm";
+            this.pnlCloseForm.Size = new System.Drawing.Size(615, 41);
+            this.pnlCloseForm.TabIndex = 2;
+            // 
+            // btnCloseForm
+            // 
+            this.btnCloseForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCloseForm.FillColor = System.Drawing.Color.Transparent;
+            this.btnCloseForm.IconColor = System.Drawing.Color.White;
+            this.btnCloseForm.Location = new System.Drawing.Point(570, 0);
+            this.btnCloseForm.Name = "btnCloseForm";
+            this.btnCloseForm.Size = new System.Drawing.Size(45, 41);
+            this.btnCloseForm.TabIndex = 1;
+            // 
             // imagebtnTinkov
             // 
             this.imagebtnTinkov.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.imagebtnTinkov.CheckedState.ImageSize = new System.Drawing.Size(91, 61);
+            this.imagebtnTinkov.CheckedState.ImageSize = new System.Drawing.Size(110, 71);
             this.imagebtnTinkov.HoverState.ImageSize = new System.Drawing.Size(0, 0);
             this.imagebtnTinkov.Image = ((System.Drawing.Image)(resources.GetObject("imagebtnTinkov.Image")));
             this.imagebtnTinkov.ImageOffset = new System.Drawing.Point(0, 0);
             this.imagebtnTinkov.ImageRotate = 0F;
-            this.imagebtnTinkov.ImageSize = new System.Drawing.Size(81, 51);
+            this.imagebtnTinkov.ImageSize = new System.Drawing.Size(100, 61);
             this.imagebtnTinkov.Location = new System.Drawing.Point(467, 47);
             this.imagebtnTinkov.Name = "imagebtnTinkov";
             this.imagebtnTinkov.PressedState.ImageSize = new System.Drawing.Size(81, 51);
@@ -116,35 +110,37 @@
             this.imagebtnTinkov.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.imagebtnTinkov.Size = new System.Drawing.Size(108, 67);
             this.imagebtnTinkov.TabIndex = 0;
+            this.imagebtnTinkov.UseTransparentBackground = true;
             this.imagebtnTinkov.CheckedChanged += new System.EventHandler(this.imagebtnTinkov_CheckedChanged);
             // 
             // imagebtnSberbank
             // 
             this.imagebtnSberbank.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.imagebtnSberbank.CheckedState.ImageSize = new System.Drawing.Size(91, 61);
+            this.imagebtnSberbank.CheckedState.ImageSize = new System.Drawing.Size(110, 71);
             this.imagebtnSberbank.HoverState.ImageSize = new System.Drawing.Size(0, 0);
             this.imagebtnSberbank.Image = ((System.Drawing.Image)(resources.GetObject("imagebtnSberbank.Image")));
             this.imagebtnSberbank.ImageOffset = new System.Drawing.Point(0, 0);
             this.imagebtnSberbank.ImageRotate = 0F;
-            this.imagebtnSberbank.ImageSize = new System.Drawing.Size(81, 51);
+            this.imagebtnSberbank.ImageSize = new System.Drawing.Size(100, 61);
             this.imagebtnSberbank.Location = new System.Drawing.Point(259, 47);
             this.imagebtnSberbank.Name = "imagebtnSberbank";
             this.imagebtnSberbank.PressedState.ImageSize = new System.Drawing.Size(81, 51);
             this.imagebtnSberbank.ShadowDecoration.BorderRadius = 10;
             this.imagebtnSberbank.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.imagebtnSberbank.Size = new System.Drawing.Size(108, 67);
+            this.imagebtnSberbank.Size = new System.Drawing.Size(121, 67);
             this.imagebtnSberbank.TabIndex = 0;
+            this.imagebtnSberbank.UseTransparentBackground = true;
             this.imagebtnSberbank.CheckedChanged += new System.EventHandler(this.imagebtnSberbank_CheckedChanged);
             // 
             // imgbtnVTB
             // 
             this.imgbtnVTB.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.imgbtnVTB.CheckedState.ImageSize = new System.Drawing.Size(91, 61);
+            this.imgbtnVTB.CheckedState.ImageSize = new System.Drawing.Size(110, 71);
             this.imgbtnVTB.HoverState.ImageSize = new System.Drawing.Size(0, 0);
             this.imgbtnVTB.Image = ((System.Drawing.Image)(resources.GetObject("imgbtnVTB.Image")));
             this.imgbtnVTB.ImageOffset = new System.Drawing.Point(0, 0);
             this.imgbtnVTB.ImageRotate = 0F;
-            this.imgbtnVTB.ImageSize = new System.Drawing.Size(81, 51);
+            this.imgbtnVTB.ImageSize = new System.Drawing.Size(100, 61);
             this.imgbtnVTB.Location = new System.Drawing.Point(40, 47);
             this.imgbtnVTB.Name = "imgbtnVTB";
             this.imgbtnVTB.PressedState.ImageSize = new System.Drawing.Size(81, 51);
@@ -152,39 +148,8 @@
             this.imgbtnVTB.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.imgbtnVTB.Size = new System.Drawing.Size(108, 67);
             this.imgbtnVTB.TabIndex = 0;
+            this.imgbtnVTB.UseTransparentBackground = true;
             this.imgbtnVTB.CheckedChanged += new System.EventHandler(this.imgbtnVTB_CheckedChanged);
-            // 
-            // lblNameBank
-            // 
-            this.lblNameBank.AutoSize = true;
-            this.lblNameBank.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblNameBank.Location = new System.Drawing.Point(35, 32);
-            this.lblNameBank.Name = "lblNameBank";
-            this.lblNameBank.Size = new System.Drawing.Size(135, 19);
-            this.lblNameBank.TabIndex = 0;
-            this.lblNameBank.Text = "Название Банка";
-            // 
-            // txbNumberCard
-            // 
-            this.txbNumberCard.Animated = true;
-            this.txbNumberCard.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbNumberCard.DefaultText = "";
-            this.txbNumberCard.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbNumberCard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbNumberCard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbNumberCard.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbNumberCard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(41)))), ((int)(((byte)(100)))));
-            this.txbNumberCard.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbNumberCard.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbNumberCard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbNumberCard.Location = new System.Drawing.Point(100, 99);
-            this.txbNumberCard.Name = "txbNumberCard";
-            this.txbNumberCard.PasswordChar = '\0';
-            this.txbNumberCard.PlaceholderText = "";
-            this.txbNumberCard.SelectedText = "";
-            this.txbNumberCard.Size = new System.Drawing.Size(311, 40);
-            this.txbNumberCard.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txbNumberCard.TabIndex = 1;
             // 
             // txbTopBalance
             // 
@@ -207,6 +172,8 @@
             this.txbTopBalance.Size = new System.Drawing.Size(293, 46);
             this.txbTopBalance.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txbTopBalance.TabIndex = 2;
+            this.txbTopBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbTopBalance.Visible = false;
             // 
             // btnTopBalance
             // 
@@ -224,17 +191,8 @@
             this.btnTopBalance.Size = new System.Drawing.Size(132, 45);
             this.btnTopBalance.TabIndex = 3;
             this.btnTopBalance.Text = "Пополнить";
+            this.btnTopBalance.Visible = false;
             this.btnTopBalance.Click += new System.EventHandler(this.btnTopBalance_Click);
-            // 
-            // btnCloseForm
-            // 
-            this.btnCloseForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCloseForm.FillColor = System.Drawing.Color.Transparent;
-            this.btnCloseForm.IconColor = System.Drawing.Color.White;
-            this.btnCloseForm.Location = new System.Drawing.Point(570, 0);
-            this.btnCloseForm.Name = "btnCloseForm";
-            this.btnCloseForm.Size = new System.Drawing.Size(45, 41);
-            this.btnCloseForm.TabIndex = 1;
             // 
             // pnlFooter
             // 
@@ -250,80 +208,6 @@
             this.pnlFooter.Size = new System.Drawing.Size(629, 248);
             this.pnlFooter.TabIndex = 2;
             // 
-            // pnlCloseForm
-            // 
-            this.pnlCloseForm.Controls.Add(this.btnCloseForm);
-            this.pnlCloseForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCloseForm.Location = new System.Drawing.Point(0, 0);
-            this.pnlCloseForm.Name = "pnlCloseForm";
-            this.pnlCloseForm.Size = new System.Drawing.Size(615, 41);
-            this.pnlCloseForm.TabIndex = 2;
-            // 
-            // txbNameUser
-            // 
-            this.txbNameUser.Animated = true;
-            this.txbNameUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbNameUser.DefaultText = "";
-            this.txbNameUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbNameUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbNameUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbNameUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbNameUser.FillColor = System.Drawing.Color.DimGray;
-            this.txbNameUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbNameUser.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbNameUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbNameUser.Location = new System.Drawing.Point(28, 225);
-            this.txbNameUser.Name = "txbNameUser";
-            this.txbNameUser.PasswordChar = '\0';
-            this.txbNameUser.PlaceholderText = "";
-            this.txbNameUser.SelectedText = "";
-            this.txbNameUser.Size = new System.Drawing.Size(206, 32);
-            this.txbNameUser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txbNameUser.TabIndex = 1;
-            // 
-            // txbActionCard
-            // 
-            this.txbActionCard.Animated = true;
-            this.txbActionCard.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbActionCard.DefaultText = "";
-            this.txbActionCard.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbActionCard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbActionCard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbActionCard.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbActionCard.FillColor = System.Drawing.Color.DimGray;
-            this.txbActionCard.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbActionCard.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbActionCard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbActionCard.Location = new System.Drawing.Point(100, 186);
-            this.txbActionCard.Name = "txbActionCard";
-            this.txbActionCard.PasswordChar = '\0';
-            this.txbActionCard.PlaceholderText = "";
-            this.txbActionCard.SelectedText = "";
-            this.txbActionCard.Size = new System.Drawing.Size(133, 32);
-            this.txbActionCard.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txbActionCard.TabIndex = 1;
-            // 
-            // lblTypeCard
-            // 
-            this.lblTypeCard.AutoSize = true;
-            this.lblTypeCard.Font = new System.Drawing.Font("JetBrains Mono", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTypeCard.Location = new System.Drawing.Point(374, 215);
-            this.lblTypeCard.Name = "lblTypeCard";
-            this.lblTypeCard.Size = new System.Drawing.Size(95, 43);
-            this.lblTypeCard.TabIndex = 0;
-            this.lblTypeCard.Text = "VISA";
-            // 
-            // pcbAttachCard
-            // 
-            this.pcbAttachCard.Image = ((System.Drawing.Image)(resources.GetObject("pcbAttachCard.Image")));
-            this.pcbAttachCard.ImageRotate = 0F;
-            this.pcbAttachCard.Location = new System.Drawing.Point(412, 32);
-            this.pcbAttachCard.Name = "pcbAttachCard";
-            this.pcbAttachCard.Size = new System.Drawing.Size(57, 50);
-            this.pcbAttachCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbAttachCard.TabIndex = 2;
-            this.pcbAttachCard.TabStop = false;
-            // 
             // ProggressBar
             // 
             this.ProggressBar.BackColor = System.Drawing.Color.Transparent;
@@ -333,26 +217,67 @@
             this.ProggressBar.TabIndex = 3;
             this.ProggressBar.Visible = false;
             // 
+            // CardSberbank
+            // 
+            this.CardSberbank.ActionCard = "";
+            this.CardSberbank.BackColor = System.Drawing.Color.DarkGray;
+            this.CardSberbank.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CardSberbank.BackgroundImage")));
+            this.CardSberbank.CVV = "";
+            this.CardSberbank.Location = new System.Drawing.Point(56, 175);
+            this.CardSberbank.Name = "CardSberbank";
+            this.CardSberbank.NameBank = "СберБанк";
+            this.CardSberbank.NameUserCard = "";
+            this.CardSberbank.NumberCard = "";
+            this.CardSberbank.Size = new System.Drawing.Size(501, 265);
+            this.CardSberbank.TabIndex = 3;
+            this.CardSberbank.Visible = false;
+            // 
+            // CardVTB
+            // 
+            this.CardVTB.ActionCard = "";
+            this.CardVTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(41)))), ((int)(((byte)(115)))));
+            this.CardVTB.CVV = "";
+            this.CardVTB.Location = new System.Drawing.Point(56, 175);
+            this.CardVTB.Name = "CardVTB";
+            this.CardVTB.NameBank = "ВТБ";
+            this.CardVTB.NameUserCard = "";
+            this.CardVTB.NumberCard = "";
+            this.CardVTB.Size = new System.Drawing.Size(501, 265);
+            this.CardVTB.TabIndex = 4;
+            this.CardVTB.Visible = false;
+            // 
+            // CardTinkoff
+            // 
+            this.CardTinkoff.ActionCard = "";
+            this.CardTinkoff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(45)))));
+            this.CardTinkoff.CVV = "";
+            this.CardTinkoff.Location = new System.Drawing.Point(56, 175);
+            this.CardTinkoff.Name = "CardTinkoff";
+            this.CardTinkoff.NameBank = "Тинькофф";
+            this.CardTinkoff.NameUserCard = "";
+            this.CardTinkoff.NumberCard = "";
+            this.CardTinkoff.Size = new System.Drawing.Size(501, 265);
+            this.CardTinkoff.TabIndex = 5;
+            this.CardTinkoff.Visible = false;
+            // 
             // AddBalanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(615, 712);
+            this.Controls.Add(this.CardSberbank);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.pnlCard);
+            this.Controls.Add(this.CardTinkoff);
+            this.Controls.Add(this.CardVTB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddBalanceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBalanceForm";
-            this.Load += new System.EventHandler(this.AddBalanceForm_Load);
-            this.pnlCard.ResumeLayout(false);
-            this.pnlCard.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
-            this.pnlFooter.ResumeLayout(false);
             this.pnlCloseForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAttachCard)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,21 +286,17 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlHeader;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlCard;
         private Guna.UI2.WinForms.Guna2ImageRadioButton imgbtnVTB;
         private Guna.UI2.WinForms.Guna2ImageRadioButton imagebtnTinkov;
         private Guna.UI2.WinForms.Guna2ImageRadioButton imagebtnSberbank;
-        private System.Windows.Forms.Label lblNameBank;
         private Guna.UI2.WinForms.Guna2Button btnTopBalance;
         private Guna.UI2.WinForms.Guna2TextBox txbTopBalance;
-        private Guna.UI2.WinForms.Guna2TextBox txbNumberCard;
         private Guna.UI2.WinForms.Guna2ControlBox btnCloseForm;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlFooter;
         private Guna.UI2.WinForms.Guna2Panel pnlCloseForm;
-        private Guna.UI2.WinForms.Guna2TextBox txbActionCard;
-        private Guna.UI2.WinForms.Guna2TextBox txbNameUser;
-        private System.Windows.Forms.Label lblTypeCard;
-        private Guna.UI2.WinForms.Guna2PictureBox pcbAttachCard;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator ProggressBar;
+        private UserControls.UC_CardPanel CardVTB;
+        private UserControls.UC_CardPanel CardSberbank;
+        private UserControls.UC_CardPanel CardTinkoff;
     }
 }
